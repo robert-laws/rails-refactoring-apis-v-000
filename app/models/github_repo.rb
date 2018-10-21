@@ -5,4 +5,6 @@ class GithubRepo < ActiveRecord::Base
     @name = hash["name"]
     @url = hash["html_url"]
   end
+
+  
 end

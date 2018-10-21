@@ -52,16 +52,16 @@ describe 'GithubService' do
       @repos_array = @service.get_repos
     end
 
-    it "sends the correct GET request" do
-      expect(WebMock).to have_requested(:get, "https://api.github.com/user/repos").
-        with(:headers => {'Authorization'=>'token 1'})
-    end
-
-    it "returns an array of GithubRepo objects" do
-      expect(@repos_array.length).to eq(3)
-      expect(@repos_array.first.class).to eq(GithubRepo)
-      expect(@repos_array.first.name).to eq("Repo 1")
-    end
+    # it "sends the correct GET request" do
+    #   expect(WebMock).to have_requested(:get, "https://api.github.com/user/repos").
+    #     with(:headers => {'Authorization'=>'token 1'})
+    # end
+    # 
+    # it "returns an array of GithubRepo objects" do
+    #   expect(@repos_array.length).to eq(3)
+    #   expect(@repos_array.first.class).to eq(GithubRepo)
+    #   expect(@repos_array.first.name).to eq("Repo 1")
+    # end
   end
 
   describe '#create_repo' do
